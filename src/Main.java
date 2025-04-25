@@ -6,5 +6,10 @@ public class Main {
         Car car1 = new Car("Toyota", 120, 'A');
         Car car2 = new Car("BMW", 180, 'S');
 
+        // Виклик статичної змінної напряму через клас
+        System.out.println("Total cars (accessing variable): " + Car.totalCars);
+
+        // Виклик статичного методу
+        Car.showTotalCars();
     }
 }

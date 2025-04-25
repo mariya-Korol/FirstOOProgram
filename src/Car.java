@@ -11,10 +11,15 @@ public class Car {
     // Зазначено модифікатор private тому, що модель авто не повинна змінюватися безпосередньо ззовні
     private String model;
 
+    // Статична змінна — загальна для всіх об'єктів класу
+    public static int totalCars = 0;
     public Car(String brand, int speed, char category) {
         this.brand = brand;
         this.speed = speed;
         this.category = category;
+
+        // Кожного разу при створенні об'єкта збільшуємо лічильник
+        totalCars++;
     }
 
     public void createCar(String brand, int speed, char category) {
@@ -26,5 +31,10 @@ public class Car {
     public static boolean isMoving() {
         boolean moving = true;
         return moving;
+    }
+
+    // Статичний метод для виведення загальної кількості авто
+    public static void showTotalCars() {
+        System.out.println("Total cars created: " + totalCars);
     }
 }
