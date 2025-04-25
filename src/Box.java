@@ -1,9 +1,15 @@
 public class Box {
+    // Зазначено модифікатор private тому, що змінна доступна лише всередині класу Box
     private int length;
+
+    // Зазначено модифікатор public тому, що цю змінну можна вільно використовувати ззовні класу
     public double capacity;
+
+    // Зазначено модифікатор protected тому, що змінна має бути доступна у спадкоємцях і в одному пакеті
     protected char colorChar;
 
-    String string;
+    // Зазначено модифікатор private тому, що ця змінна — внутрішня інформація класу, не повинна бути доступною ззовні
+    private String string;
 
     public Box(int length, double capacity, char colorChar) {
         this.length = length;
