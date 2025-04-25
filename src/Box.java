@@ -5,15 +5,20 @@ public class Box {
 
     String string;
 
-    public void createBox(int length, double capacity, char colorChar){
+    public Box(int length, double capacity, char colorChar) {
         this.length = length;
         this.capacity = capacity;
         this.colorChar = colorChar;
     }
 
-    public static int methodName(){
-        int result = 1;
+    public void createBox(int length, double capacity, char colorChar) {
+        this.length = length;
+        this.capacity = capacity;
+        this.colorChar = colorChar;
+    }
 
+    public static int methodName() {
+        int result = 1;
         return result;
     }
 }

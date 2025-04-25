@@ -5,15 +5,20 @@ public class Car {
 
     String model;
 
-    public void createCar(String brand, int speed, char category){
+    public Car(String brand, int speed, char category) {
         this.brand = brand;
         this.speed = speed;
         this.category = category;
     }
 
-    public static boolean isMoving(){
-        boolean moving = true;
+    public void createCar(String brand, int speed, char category) {
+        this.brand = brand;
+        this.speed = speed;
+        this.category = category;
+    }
 
+    public static boolean isMoving() {
+        boolean moving = true;
         return moving;
     }
 }
