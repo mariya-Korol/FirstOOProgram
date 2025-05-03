@@ -11,5 +11,12 @@ public class Main {
 
         // Виклик статичного методу
         Car.showTotalCars();
+
+        Car genericCar = new Car("Toyota", 120, 'A');
+        Car tesla = new ElectricCar("Tesla", 150, 'B', 85); //  Динамічний поліморфізм
+
+        genericCar.displayInfo(); // This is a generic car.
+        tesla.displayInfo();      // Electric Car | Battery Level: 85%
+
     }
 }
