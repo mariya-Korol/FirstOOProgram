@@ -43,5 +43,17 @@ public class Main {
         System.out.println(Box.methodName(5));                     // → 5
         System.out.println(Box.methodName(2.5, 3.5));              // → 6.0
         System.out.println(Box.methodName("Length", 10));         // → Length: 10
+
+
+        /* === Практична робота №6 "Реалізація патерну типу Singelton - Одинак" === */
+        President p1 = President.getInstance("President1");
+        p1.showInfo();  // President's name is: President1
+
+        // Спроба створити нового президента
+        President p2 = President.getInstance("President2");
+        p2.showInfo();  // Все ще: President's name is: President1
+
+        // Перевірка, чи це один і той самий об’єкт
+        System.out.println("Same instance? " + (p1 == p2));  // true
     }
 }
