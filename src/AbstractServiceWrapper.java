@@ -6,5 +6,5 @@ public abstract class AbstractServiceWrapper implements Service {
     }
 
     @Override
-    public abstract void process(String request); // залишаємо реалізацію на спадкоємців
+    public abstract void process(String request);
 }

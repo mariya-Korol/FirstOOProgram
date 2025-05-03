@@ -6,8 +6,8 @@ public class LoggingServiceWrapper extends AbstractServiceWrapper {
 
     @Override
     public void process(String request) {
-        System.out.println("[LOG] Called with: " + request);
+        System.out.println("[LOG] Start: " + request);
         wrappedService.process(request);
-        System.out.println("[LOG] Finished processing.");
+        System.out.println("[LOG] End");
     }
 }

@@ -89,5 +89,21 @@ public class Main {
 
         account.setBalance(1200);  
         account.setBalance(980);   
+
+
+        /* === Практична робота №10 "Реалізація принципу Спадкування" === */
+        Service simple = new SimpleService();
+
+        Service logger = new LoggingServiceWrapper(simple);
+        Service secured = new SecurityServiceWrapper(simple);
+
+        System.out.println("\n--- Logging ---");
+        logger.process("getUserData");
+
+        System.out.println("\n--- Security ---");
+        secured.process("adminOnly_getConfig"); // буде заборонено
+
+        System.out.println("\n--- Security ---");
+        secured.process("viewDashboard"); // буде дозволено
     }
 }
