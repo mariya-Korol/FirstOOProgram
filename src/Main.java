@@ -77,6 +77,17 @@ public class Main {
 
         box.describe();
         chair.describe();
-        
+
+        /* === Практична робота №9 "Реалізація патерну типу Observer" === */
+        BankAccount account = new BankAccount(1000);
+
+        AccountHolder user1 = new AccountHolder("Олександр");
+        AccountHolder user2 = new AccountHolder("Марія");
+
+        account.addObserver(user1);
+        account.addObserver(user2);
+
+        account.setBalance(1200);  
+        account.setBalance(980);   
     }
 }
