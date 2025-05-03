@@ -66,6 +66,17 @@ public class Main {
 
         // Перегляд значення після невдалої зміни
         System.out.println("Actual size: " + shoe.getSize()); // → 42
+
+
+        /* === Практична робота №8 "Створення та використання інтерфейсів" === */
+        Box box = new Box(10, 5.5, 'R');
+        Chair chair = new Chair("Wood", 4, false);
+
+        System.out.println("Box class name: " + box.getClassName());
+        System.out.println("Chair class name: " + chair.getClassName());
+
+        box.describe();
+        chair.describe();
         
     }
 }
