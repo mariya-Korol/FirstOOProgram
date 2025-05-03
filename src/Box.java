@@ -1,14 +1,7 @@
 public class Box {
-    // Зазначено модифікатор private тому, що змінна доступна лише всередині класу Box
     private int length;
-
-    // Зазначено модифікатор public тому, що цю змінну можна вільно використовувати ззовні класу
     public double capacity;
-
-    // Зазначено модифікатор protected тому, що змінна має бути доступна у спадкоємцях і в одному пакеті
     protected char colorChar;
-
-    // Зазначено модифікатор private тому, що ця змінна — внутрішня інформація класу, не повинна бути доступною ззовні
     private String string;
 
     public Box(int length, double capacity, char colorChar) {
@@ -23,8 +16,21 @@ public class Box {
         this.colorChar = colorChar;
     }
 
+    // 🔁 Статичний метод (перевантажений) — приклад статичного поліморфізму
+
     public static int methodName() {
-        int result = 1;
-        return result;
+        return 1;
+    }
+
+    public static int methodName(int multiplier) {
+        return 1 * multiplier;
+    }
+
+    public static double methodName(double a, double b) {
+        return a + b;
+    }
+
+    public static String methodName(String label, int value) {
+        return label + ": " + value;
     }
 }

@@ -32,5 +32,12 @@ public class Main {
 
          Service service = new LoggingServiceWrapper(new SimpleService());
          service.process("Example request");
+
+        /* === Практична робота №5 "Реалізація принципу статичного поліморфізму" === */
+        // Виклики перевантажених методів
+        System.out.println(Box.methodName());                      // → 1
+        System.out.println(Box.methodName(5));                     // → 5
+        System.out.println(Box.methodName(2.5, 3.5));              // → 6.0
+        System.out.println(Box.methodName("Length", 10));         // → Length: 10
     }
 }
