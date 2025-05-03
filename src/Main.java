@@ -32,6 +32,10 @@ public class Main {
 
          Service service = new LoggingServiceWrapper(new SimpleService());
          service.process("Example request");
+ 
+        /* === Практична робота №4 "Code Convention" === */
+        // Відповідних помилок не було знайдено. Код написано за є принципами гарного написання коду.
+
 
         /* === Практична робота №5 "Реалізація принципу статичного поліморфізму" === */
         // Виклики перевантажених методів
