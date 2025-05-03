@@ -55,5 +55,17 @@ public class Main {
 
         // Перевірка, чи це один і той самий об’єкт
         System.out.println("Same instance? " + (p1 == p2));  // true
+
+
+        /* === Практична робота №7 "Реалізація принципу Інкапсуляції" === */
+        Shoe shoe = new Shoe(42, "Black", "Adidas");
+        shoe.displayInfo();
+
+        // Спроба задати некоректний розмір
+        shoe.setSize(25); //Invalid shoe size. Must be between 30 and 50.
+
+        // Перегляд значення після невдалої зміни
+        System.out.println("Actual size: " + shoe.getSize()); // → 42
+        
     }
 }
