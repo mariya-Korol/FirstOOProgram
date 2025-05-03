@@ -26,5 +26,11 @@ public class Main {
          Service logged = new LoggingServiceWrapper(simple);
  
          logged.process("Get user data");
+
+
+         /* === Практична робота №3 "Абстрактні класи" === */
+
+         Service service = new LoggingServiceWrapper(new SimpleService());
+         service.process("Example request");
     }
 }

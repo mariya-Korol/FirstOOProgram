@@ -1,14 +1,13 @@
-public class LoggingServiceWrapper implements Service {
-    private final Service wrappedService;
+public class LoggingServiceWrapper extends AbstractServiceWrapper {
 
     public LoggingServiceWrapper(Service wrappedService) {
-        this.wrappedService = wrappedService;
+        super(wrappedService);
     }
 
     @Override
     public void process(String request) {
-        System.out.println("[LOG] Method 'process' called with input: " + request);
+        System.out.println("[LOG] Called with: " + request);
         wrappedService.process(request);
-        System.out.println("[LOG] Method 'process' finished.");
+        System.out.println("[LOG] Finished processing.");
     }
 }
