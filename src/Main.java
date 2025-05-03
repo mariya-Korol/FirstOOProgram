@@ -12,11 +12,19 @@ public class Main {
         // Виклик статичного методу
         Car.showTotalCars();
 
+
+        /* === Практична робота №1 "Реалізація принципу динамічного поліморфізму" === */
         Car genericCar = new Car("Toyota", 120, 'A');
         Car tesla = new ElectricCar("Tesla", 150, 'B', 85); //  Динамічний поліморфізм
 
         genericCar.displayInfo(); // This is a generic car.
         tesla.displayInfo();      // Electric Car | Battery Level: 85%
 
+
+         /* === Практична робота №2 "Реалізація патерну типу Wrapper" === */
+         Service simple = new SimpleService();
+         Service logged = new LoggingServiceWrapper(simple);
+ 
+         logged.process("Get user data");
     }
 }
