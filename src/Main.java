@@ -105,5 +105,14 @@ public class Main {
 
         System.out.println("\n--- Security ---");
         secured.process("viewDashboard"); // буде дозволено
+
+
+
+        /* === Практична робота №11 "Реалізація патерну типу фабрика" === */
+        SimplePizzaFactory factory = new SimplePizzaFactory();
+        PizzaStore store = new PizzaStore(factory);
+
+        store.orderPizza("cheese");
+        store.orderPizza("pepperoni");
     }
 }
